@@ -1,0 +1,14 @@
+*{ /* SELECIONA TUDO */
+    margin: 0; /* tira margem externa */
+    padding: 0; /* tira margem interna */
+    box-sizing: border-box;
+}
+
+ul{ /* seleciona lista */
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}

@@ -1,0 +1,160 @@
+/*.curriculo{
+    color: red;
+}/* criar uma regra para cada classe
+
+a{ /* todas as âncoras 
+    color: green;
+}*/
+
+body{ /* o corpo é todo o quadro que envolve a janela */
+    background-image: url(../imagens/fundo-novo.jpg); /* imagem de fundo (referenciada por endereço) - os dois pontos significam que está uma pasta atrás da pasta em que se encontra este arquivo */
+    background-repeat: no-repeat; /* não repete a imagem, ela aparece só uma vez na tela */
+    background-size: cover; /* cobre o tamanho da janela */
+    background-position: center; /* posiciona a imagem no centro */
+
+    font-family: 'Nunito', sans-serif, monospace; /* aqui temos a fonte que estamos usando (que está propriamente referenciada no index) na página inteira e uma opcional, caso não funcione */
+    color: #ffc400; /* cor da fonte da página toda (aparentemente não precisa dizer que é da fonte essa cor) */
+    font-size: 20px; /* tamanho da fonte (px = pixel) */
+    display: flex; /* flex é uma forma de facilitar o posicionamento dos elementos da tela */
+    justify-content: center; /* só funciona com o "display: flex", justifica horizontalmente no centro */
+    align-items: center; /* alinha os elementos pertencentes ao body ao centro da tela */
+    min-height: 100vh; /* altura mínima do body 100% da altura vertical (vh = vertical height) */
+    padding: 30px; /* define uma a distância entre o conteúdo de um elemento e suas bordas (MDN References) */
+}
+
+.cartao{ /* aqui eu me refiro à classe do <main> que eu nomeei ".cartao" */
+    background-color: #ff660073; /* cor do fundo do cartão */
+    width: 370px; /* largura fixa do cartão */
+    border: 2px solid #ff5e00; /* borda do cartão (enfeite) */
+    border-radius: 10px; /*arredondamento das arestas da borda do cartão */
+    overflow: hidden; /* Esconde os elementos que saem do limite do cartão */
+}
+
+.abas img{ /* me refiro às imagens da classe ".abas", pertencente a uma lista desordenada (ul) dentro do <main> ".cartao" */
+    width: 30px; /* tamanho das imagens da classe ".abas" (que são os dois gifs) */
+    height: 30px;
+}
+
+.cartao .minhas-informacoes{ /* esse é o nome de uma classe dada a uma divisão <div> do cartão */
+    padding-top: 20px; /* a distância entre o conteúdo dessa divisão e o topo dela */
+    display: flex; /* linha 18 */
+    flex-direction: column; /* muda a direção dos elementos internos da divisão de row (consecutivos) para column (coluna) */
+    align-items: center; /* alinha horizontalmente por causa do flex-direction (linha 20) */
+    gap: 10px; /* define lacunas entre consecutivas e colunas ao mesmo tempo */
+}
+
+.cartao .minhas-informacoes img{ /* definindo regras para as imagens dentro dessa divisão */
+    width: 96px; /* largura da imagem */
+    height: 96px; /* altura da imagem */
+    border-radius: 50%; /* arredondamento da borda da imagem (50% sempre vai tornar a imagem redonda) */
+    border: 4px solid #ff5e00; /* borda (enfeite) da imagem */
+}
+
+.cartao .minhas-informacoes .nome{ /* referenciando a classe do texto do nome */
+    font-size: 30px; /* tamanho da fonte */
+}
+
+.cartao .minhas-informacoes .cargo{ /* referenciando a classe do texto do cargo */
+    font-size: 24px; /* tamanho da fonte */
+    color: #e48100; /* cor da fonte (nunca precisa dizer que é sobre a fonte? Só o resto que tem que referenciar? */
+}
+
+.cartao .conteudo{ /* referenciando outra divisão <div> do cartão pelo nome da sua classe ".conteudo" */
+    margin-top: 15px; /* muda a largura da margem do topo (poderia ser substituído por gap?) */
+}
+
+.cartao .conteudo .abas{ /* referenciando a lista desordenada (ul) ".abas" */
+    display: flex; /* isso só é feito neste caso para que elas estejam automaticamente em row (consecutivas) */
+}
+
+.cartao .abas .aba{ /* referenciando todos os itens da lista anterior (li) para criar normas */
+    width: 50%; /* largura (50% da largura total do avô, que é o cartão) */
+    display: flex; /* linha 18 */
+    justify-content: center; /* centraliza o conteúdo da aba */
+    padding: 10px 0; /* bordas da aba em relação ao conteúdo */
+    cursor: pointer; /* muda o cursor quando ele passar por cima da aba */
+    transition: background-color 0.2s ease-in-out; /* faz uma transição suave de cor quando o backgraound color muda */
+}
+
+/* agora eu entendo por que devemos desenhar o projeto antes, porque sem isso, não conseguiríamos definir os tipos de itens que temos na nossa página */
+
+.cartao .abas img{ /* isso seria uma repetição acidental da linha 33? */
+    width: 30px; /* largura da imagem da aba (gif) */
+}
+
+.cartao .abas .aba.selecionado{ /* referenciando a aba que tem a classe "selecionado" */
+    background-color: #ff5e00 /* definindo a cor da aba referenciada */
+}
+
+.cartao .informacoes-abas{ /* referenciando toda a caixa de informações */
+    background-color: #ff5e00 /* definindo a cor da caixa referenciada como a mesma da aba selecionada */
+}
+
+.cartao .abas .aba:hover{ /* aqui temos a subclasse "hover" = passando o cursor por cima */
+    background-color: #ff8e4dea; /* define a cor do background quando o mouse passa por cima */
+}
+
+.informacoes-abas .informacao{ /* definindo as divisões de classe ".informação" */
+    min-height: 260px; /*altura mínima da caixa */
+    padding: 15px; /* borda da caixa em relação ao conteúdo */
+    display: none; /* disponibilidade: nenhuma - invisível */
+}
+
+.informacoes-abas .informacao.selecionado{ /* referenciando o item que possui as classes ".informação e .selecionado */
+    display: block; /* gera uma caixa de elemento de bloco */
+}
+
+.informacoes-abas .sub-titulo{ /* referencia a classe de subtítulo */
+    font-size: 22px; /* tamanho da fonte */
+    margin-bottom: 25px; /* margem inferior */
+    text-align: center; /* alinhar o texto no meio da caixa */
+}
+
+.informacoes-abas .descricao{ /* referencia o texto que está dentro da caixa */
+    font-size: 20px; /* tamanho da fonte */
+    max-height: 180px; /* altura máxima do conteúdo da caixa */
+    overflow-y: auto; /* faz com que se o conteúdo ultrapassar a altura máxima, apareça uma barra de rolamento */
+    padding-right: 15px; /* margem lateral direita do conteúdo */
+}
+
+.informacoes-abas .descricao span{ /* referenciando um trecho específico do texto marcado com entrada e saída de <span> */
+    color: #fffb00; /* cor do texto referenciado */
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+
+}
+
+.redes-sociais{ /* referenciando lista desordenada (ul) */
+    display: flex; /* linha 18 */
+    flex-direction: column; /* redirecionando o flex para coluna */
+    gap: 25px; /* distanciando os diferentes conteúdos um do outro */
+    align-items: center; /* alinha o conteúdo no centro */
+    max-height: 180px; /* definindo a altura máxima da caixa de conteúdo */
+    overflow-y: auto; /* linha 115 */
+}
+
+.redes-sociais li a{ /* referenciando os itens da lista que são âncoras */
+    width: 250px; /* largura dos itens */
+    display: block; /* disponibiliza em uma caixa de elementos em bloco */
+    color: #f3f3f3; /* cor do texto */
+    text-align: center; /* alinha o texto ao centro */
+    padding: 10px; /* faz margem da caixa em relação ao conteúdo */
+    font-size: 20px; /* tamanho da fonte */
+    transition: opacity 0.3s ease-in-out; /* linha 75 */
+}
+
+.redes-sociais li a:hover{ /* referenciando os itens de lista que são âncoras quando o cursor passa por cima deles */
+    opacity: 0.8; /* altera a opacidade do item */
+}
+
+.redes-sociais .curriculo{ /* referenciando o primeiro link */
+    background-color: #06c185; /* definindo a cor do item referenciado */
+}
+
+.redes-sociais .linkedin{ /* referenciando o segundo link */
+    background-color: #1d87bd; /* definindo a cor do item referenciado */
+}
+
+.redes-sociais .github { /* referenciando o terceiro link */
+    background-color: #545454; /* definindo a cor do item referenciado */
+}

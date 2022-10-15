@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!-- o que tem na cabeça da página? -->
+    <meta charset="UTF-8"> <!-- não sei ainda o que é -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- fonte referenciada retirada diretamente da internet, do site google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=VT323&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/css/reset.css"> <!-- aqui é o link do html com o css -->
+    <link rel="stylesheet" href="./src/css/estilos.css"> <!-- idem -->
+    <link rel="stylesheet" href="./src/css/rolagem.css"> <!-- idem -->
+
+    <title>Mini Portfólio</title> <!-- nome que vai aparecer na aba / na parte superior da página -->
+</head>
+<body> <!-- corpo da página -->
+    <main class="cartao"> <!-- objeto principal da página, classificado com nome que eu crio "cartao" -->
+        <div class="minhas-informacoes"> <!-- divisor do objeto principal (uma caixa que fica dentro do cartão) -->
+            <img src="./src/imagens/Andre-foto.jfif" alt="foto de perfil"> <!-- aqui eu coloco uma imagem dentro da divisão de classe "minhas-informacoes", src é de onde eu tiro a imagem, alt é descrição de imagem -->
+            <h1 class="nome">André Leite</h1> <!-- aqui eu coloco um header de primeira importância com o meu nome e referencio ele com a classe "nome", >>>> ISSO FOI RETIRADO DO CODIGO >>>> (depois eu altero a fonte que eu referencio a partir do nome que está no site do google ;; fonts style="font-family: 'VT323', monospace;" ;; ESTAVA DEPOIS DA CLASS DENTRO DA TAG h1 ) -->
+            <h2 class="cargo">Desenvolvedor Frontend Júnior</h2> <!-- aqui eu crio um header de segunda importância e o classifico como "cargo" -->
+        </div>
+
+        <div class="conteudo"> <!-- crio mais um divisor dentro do main e o classifico como "conteúdo" -->
+            <ul class="abas"> <!-- ul é lista desordenada, eu a classifico como "abas" -->
+                <li class="aba selecionado" id="sobre-mim"> <!-- aqui eu crio um item de lista (list item), e dou duas classes a ele: "aba" e "selecionado" --> 
+                    <img src="./src/imagens/sobre.png" alt="ícone de sobre mim"> <!-- coloco uma imagem para ser o ícone da primeira aba -->
+                </li>
+                <li class="aba" id="minhas-redes"> <!-- crio um item de lista e o classifico só como "aba", sem "selecionado" -->
+                    <img src="./src/imagens/contatos.png" alt="ícone de redes sociais"> <!-- mais uma imagem -->
+                </li>
+            </ul>
+
+            <div class="informacoes-abas"> <!-- crio uma divisão dentro da de classe "conteúdo" -->
+                 <div class="informacao selecionado" id="informacao-sobre-mim"> <!-- mais uma divisão dentro da de classe "informações-abas" e dou duas classes: "informacao" e "selecionado" -->
+                     <h3 class="sub-titulo">Sobre</h3> <!-- crio um header de terceira importância e o classifico como "sub-título" -->
+
+                     <div class="descricao"> <!-- crio uma divisão de classe "descricao" dentro da de classes "informacao" e "selecionado" -->
+                        <p> <!-- crio um parágrafo -->
+                            Oi! meu nome é André Leite, seja bem-vindo(a)!
+                            <br> <br>
+                          </p>
+            
+                          <p>
+                            Eu estou mudando de área agora, trabalhava exclusivamente com música
+                            e produção musical, além de fazer programas voltados ao áudio e arte sonora
+                            com o ambiente visual de programação <span> Pure Data. </span>
+                            <br> <br>
+                          </p>
+
+                          <p> <!-- crio mais um parágrafo -->
+                            Sempre gostei de programação, mas só tive a coragem de começar a estudar
+                            linguagens menos específicas agora, com 28 anos. 
+                            <br> <br>
+                            Atualmente comecei a estudar
+                            <span>HTML, CSS e JavaScript.</span> <!-- span serve para estilizar -->
+                          </p>
+                     </div>
+                 </div>
+
+                 <div  class="informacao" id="informacao-minhas-redes"> <!-- crio mais um divisor dentro do de classe "informacoes-abas" e o classifico como "informacao", como o último, mas sem o "selecionado" -->
+                     <h3 class="sub-titulo">Minhas redes</h3> <!-- crio um header de terceira importância e o classifico como "sub-titulo" -->
+
+                     <ul class="redes-sociais"> <!-- crio uma lista desordenada com a classe "redes-sociais" -->
+                         <li> <!-- crio um item de lista -->
+                             <a href="https://www.instagram.com/" target="_blank" class="curriculo">Curriculo</a> <!-- referencio o link de um currículo (target="_blank") é uma forma de fazer o site raiz não fechar quando você clica no link, mas abrir uma nova guia. Criei uma âncora e a classifiquei como "currículo" -->
+                         </li>
+                         <li> <!-- crio um item de lista -->
+                             <a href="https://www.linkedin.com/in/andr%C3%A9-leite-pires-2358a722a/" target="_blank" class="linkedin">LinkedIn</a> <!-- crio uma âncora e a classifico como "linkedin" -->
+                         </li>
+                         <li> <!-- crio um item de lista -->
+                             <a href="https://www.facebook.com/" target="_blank" class="github">Github</a> <!-- crio uma âncora e a classifico como "github" -->
+                         </li>
+                     </ul>
+
+                 </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="./src/js/index.js"></script>
+</body>
+</html>
